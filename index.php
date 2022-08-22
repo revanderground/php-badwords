@@ -1,4 +1,4 @@
-<? /* PHP Badwords
+<?php /* PHP Badwords
 nome repo: php-badwords
 Descrizione:
 Creare una variabile con un paragrafo di testo a vostra scelta.
@@ -28,11 +28,12 @@ $censura='***';
 
 
     <p>
-        <?
+        <?php
         var_dump($_GET['badword']);
-        echo $stringa='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse unde voluptate doloremque sint sunt quod consequuntur quae quas, voluptatibus nesciunt voluptates pariatur tempora. Corrupti, aperiam mollitia! Nemo corrupti voluptas porro.';
-        
-        str_replace($_GET['badword'], $censura, $stringa);
+        $stringa='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse unde voluptate doloremque sint sunt quod consequuntur quae quas, voluptatibus nesciunt voluptates pariatur tempora. Corrupti, aperiam mollitia! Nemo corrupti voluptas porro.';
+        echo '<br>';
+        echo str_replace($_GET['badword'], $censura, $stringa);
+       
 
         ?>
     </p>
